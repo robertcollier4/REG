@@ -1,0 +1,4 @@
+{
+	"selector": "source.reg",
+    "cmd": ["regedit.exe", "$file"],
+}

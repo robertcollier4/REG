@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.2",
+	"packages": [
+		{
+			"name": "REG",
+			"description": "Windows Registry Script (.reg) Language package for SublimeText. Includes syntax highlighting, comments toggling, declaration snippets, and a build system to merge current file.",
+			"author": "robertcollier4",
+			"homepage": "https://github.com/robertcollier4/REG",
+			"last_modified": "2013-06-12 14:00:00",
+			"platforms": {
+				"windows": [
+					{
+						"version": "1.0.0",
+						"url": "https://nodeload.github.com/robertcollier4/REG/zip/1.0.0"
+					}
+				]
+			}
+		}
+	]
+}
