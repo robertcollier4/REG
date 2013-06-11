@@ -1,0 +1,4 @@
+REG
+===
+
+Windows Registry Script (.reg) Language package for SublimeText. Includes syntax highlighting, comments toggling, declaration snippets, and a build system to merge current file.
