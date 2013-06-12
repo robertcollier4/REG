@@ -10,8 +10,8 @@
 			"platforms": {
 				"windows": [
 					{
-						"version": "1.0.0",
-						"url": "https://nodeload.github.com/robertcollier4/REG/zip/1.0.0"
+						"version": "1.0.1",
+						"url": "https://nodeload.github.com/robertcollier4/REG/zip/1.0.1"
 					}
 				]
 			}

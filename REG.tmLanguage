@@ -58,7 +58,7 @@
 			<key>match</key>
 			<string>^\s*(\[(?!-))(.*?)(\])</string>
 			<key>name</key>
-			<string>entity.name.function.regkey.add.reg</string>
+			<string>entity.name.function.section.add.reg</string>
 		</dict>
 
 		<dict>
@@ -83,7 +83,7 @@
 			<key>match</key>
 			<string>^\s*(\[-)(.*?)(\])</string>
 			<key>name</key>
-			<string>entity.name.function.regkey.delete.reg</string>
+			<string>entity.name.function.section.delete.reg</string>
 		</dict>
 
 
@@ -126,49 +126,92 @@
 					<string>meta.value.reg</string>
 				</dict> -->
 
+
 <!-- 				<key>7</key>
 				<dict>
 					<key>name</key>
-					<string>meta.section.value.dwordtype</string>
+					<string>meta.section.value.quotedtype</string>
 				</dict> -->
 				<key>8</key>
 				<dict>
 					<key>name</key>
-					<string>support.type.dword.reg</string>
+					<string>punctuation.definition.quote.reg</string>
 				</dict>
 				<key>9</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.arithmetic.colon.autoit</string>
+					<string>string.name.regdata.reg</string>
 				</dict>
 				<key>10</key>
 				<dict>
 					<key>name</key>
-					<string>constant.numeric.dword.autoit</string>
+					<string>punctuation.definition.quote.reg</string>
 				</dict>
 
 <!-- 				<key>11</key>
 				<dict>
 					<key>name</key>
-					<string>meta.section.value.quotedtype</string>
+					<string>meta.section.value.dwordtype</string>
 				</dict> -->
 				<key>12</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.quote.reg</string>
+					<string>support.type.dword.reg</string>
 				</dict>
 				<key>13</key>
 				<dict>
 					<key>name</key>
-					<string>string.name.regdata.reg</string>
+					<string>keyword.operator.arithmetic.colon.reg</string>
 				</dict>
 				<key>14</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.quote.reg</string>
+					<string>constant.numeric.dword.reg</string>
 				</dict>
 
-				<key>15</key>
+
+<!-- 				<key>15</key>
+				<dict>
+					<key>name</key>
+					<string>meta.section.value.hextype</string>
+				</dict> -->
+				<key>16</key>
+				<dict>
+					<key>name</key>
+					<string>support.type.dword.reg</string>
+				</dict>
+				<key>17</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.parenthesis.reg</string>
+				</dict>
+				<key>18</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.hex.size.reg</string>
+				</dict>
+				<key>19</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.parenthesis.reg</string>
+				</dict>
+				<key>20</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.colon.reg</string>
+				</dict>
+				<key>21</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.hex.reg</string>
+				</dict>
+				<key>22</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.linecontinuation.reg</string>
+				</dict>
+
+				<key>23</key>
 				<dict>
 					<key>name</key>
 					<string>comment.declarationline.semicolon.reg</string>
@@ -176,9 +219,38 @@
 
 			</dict>
 			<key>match</key>
-			<string>^(\s*(["']?)(.+?)(["']?)\s*(=))?\s*(((dword)(\:)([\dabcdef]{8}))|((["']?)(.*?)(["']?)))\s*(;.*)?$</string>
+			<!-- <string>^(\s*(["']?)(.+?)(["']?)\s*(=))?\s*(((["'])(.*?)(["']))|((dword)(\:)([\dabcdef]{8}))|((hex)(\()([\d]*)(\))(\:)(.*?)))\s*(;.*)?$</string> -->
+			<string>^(\s*(["']?)(.+?)(["']?)\s*(=))?\s*(((["'])(.*?)(["']))|(((?i:dword))(\:)([\dabcdefABCDEF]{8}))|(((?i:hex))(\()([\d]*)(\))(\:)(.*?)(\\)))\s*(;.*)?$</string>
 			<key>name</key>
 			<string>meta.declaration.reg</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>[0-9]+</string>
+			<key>name</key>
+			<string>constant.numeric.reg</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>[a-fA-F]+</string>
+			<key>name</key>
+			<string>constant.numeric.hex.reg</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>,+</string>
+			<key>name</key>
+			<string>constant.numeric.hex.comma.reg</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\\</string>
+			<key>name</key>
+			<string>keyword.operator.arithmetic.linecontinuation.reg</string>
 		</dict>
 
 	</array>
