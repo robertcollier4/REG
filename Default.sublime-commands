@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "REG: Jump to Registry Key",
+        "command": "jumptoregkey"
+    }
+]

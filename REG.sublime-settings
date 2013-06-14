@@ -1,0 +1,5 @@
+// By default this uses SysInternals RegJump (3rd-party utility) included in the REG package directory to jump to the registry key in Windows Registry Editor. However you may change to open with a different 3rd-party registry editor.
+{
+	"RegKeyJumpCmd": ["{PACKAGE_PATH}\\REG\\regjump.exe"]
+	// "RegKeyJumpCmd": ["C:\\Program Files\\Registry Workshop\\RegWorkshop.exe", "/g"]
+}

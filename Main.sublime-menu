@@ -1,0 +1,43 @@
+[
+	{
+	 "caption": "Tools",
+	 "mnemonic": "T",
+	 "id": "tools",
+	 "children":
+		[
+			{ "caption": "-", "id": "packagecommands" },
+			{ "command": "jumptoregkey", "caption": "REG: Jump to Reg Key"}
+		]
+	},
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"mnemonic": "P",
+				"id": "package-settings",
+				"children":
+				[
+                    {
+                        "caption": "REG",
+                        "children":
+                        [
+							{
+								"command": "open_file",
+								"args": {"file": "${packages}/REG/REG.sublime-settings"},
+								"caption": "REG Settings - Default"
+							},
+							{
+								"command": "open_file",
+								"args": {"file": "${packages}/User/REG.sublime-settings"},
+								"caption": "REG Settings - User"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
