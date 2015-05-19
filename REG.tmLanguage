@@ -194,30 +194,34 @@
 				<key>19</key>
 				<dict>
 					<key>name</key>
-					<string>constant.numeric.hex.size.reg</string>
+					<string>keyword.operator.arithmetic.parenthesis.reg</string>
 				</dict>
 				<key>20</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.arithmetic.parenthesis.reg</string>
+					<string>constant.numeric.hex.size.reg</string>
 				</dict>
 				<key>21</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.arithmetic.colon.reg</string>
+					<string>keyword.operator.arithmetic.parenthesis.reg</string>
 				</dict>
 				<key>22</key>
 				<dict>
 					<key>name</key>
-					<string>constant.numeric.hex.reg</string>
+					<string>keyword.operator.arithmetic.colon.reg</string>
 				</dict>
 				<key>23</key>
 				<dict>
 					<key>name</key>
+					<string>constant.numeric.hex.reg</string>
+				</dict>
+				<key>24</key>
+				<dict>
+					<key>name</key>
 					<string>keyword.operator.arithmetic.linecontinuation.reg</string>
 				</dict>
-
-				<key>24</key>
+				<key>25</key>
 				<dict>
 					<key>name</key>
 					<string>comment.declarationline.semicolon.reg</string>
@@ -225,7 +229,7 @@
 
 			</dict>
 			<key>match</key>
-			<string>^(\s*(["']?)(.+?)(["']?)\s*(=))?\s*((-)|((["'])(.*?)(["']))|(((?i:dword))(\:)([\dabcdefABCDEF]{8}))|(((?i:hex))(\()([\d]*)(\))(\:)(.*?)(\\)))\s*(;.*)?$</string>
+			<string>^(\s*(["']?)(.+?)(["']?)\s*(=))?\s*((-)|((["'])(.*?)(["']))|(((?i:dword))(\:)([\dabcdefABCDEF]{8}))|(((?i:hex))((\()([\d]*)(\)))?(\:)(.*?)(\\?)))\s*(;.*)?$</string>
 			<key>name</key>
 			<string>meta.declaration.reg</string>
 		</dict>
