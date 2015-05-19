@@ -2,13 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 	<dict>
+		<key>name</key>
+		<string>Registry</string>
+
 		<key>fileTypes</key>
 		<array>
 			<string>reg</string>
 			<string>REG</string>
 		</array>
-		<key>name</key>
-		<string>Registry</string>
+		
 		<key>patterns</key>
 		<array>
 			<dict>
