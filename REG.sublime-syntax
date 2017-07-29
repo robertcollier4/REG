@@ -10,7 +10,7 @@ contexts:
   main:
     - match: Windows Registry Editor Version 5\.00|REGEDIT4
       scope: keyword.control.import.reg
-    - match: (;).*$
+    - match: (;).*(\n|$)
       scope: comment.line.semicolon.reg
       captures:
         1: punctuation.definition.comment.reg
