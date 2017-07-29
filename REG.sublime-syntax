@@ -1,0 +1,59 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: REG
+file_extensions:
+  - reg
+  - REG
+scope: source.reg
+contexts:
+  main:
+    - match: Windows Registry Editor Version 5\.00|REGEDIT4
+      scope: keyword.control.import.reg
+    - match: (;).*(\n|$)
+      scope: comment.line.semicolon.reg
+      captures:
+        1: punctuation.definition.comment.reg
+    - match: '^\s*(\[(?!-))(.*?)(\])'
+      scope: entity.name.function.section.add.reg
+      captures:
+        1: punctuation.definition.section.reg
+        2: entity.section.reg
+        3: punctuation.definition.section.reg
+    - match: '^\s*(\[-)(.*?)(\])'
+      scope: entity.name.function.section.delete.reg
+      captures:
+        1: punctuation.definition.section.reg
+        2: entity.section.reg
+        3: punctuation.definition.section.reg
+    - match: '^(\s*(["'']?)(.+?)(["'']?)\s*(=))?\s*((-)|((["''])(.*?)(["'']))|(((?i:dword))(\:)([\dabcdefABCDEF]{8}))|(((?i:hex))((\()([\d]*)(\)))?(\:)(.*?)(\\?)))\s*(;.*)?$'
+      scope: meta.declaration.reg
+      captures:
+        2: punctuation.definition.quote.reg
+        3: support.function.regname.ini
+        4: punctuation.definition.quote.reg
+        5: punctuation.definition.equals.reg
+        7: keyword.operator.arithmetic.minus.reg
+        9: punctuation.definition.quote.reg
+        10: string.name.regdata.reg
+        11: punctuation.definition.quote.reg
+        13: support.type.dword.reg
+        14: keyword.operator.arithmetic.colon.reg
+        15: constant.numeric.dword.reg
+        17: support.type.dword.reg
+        18: keyword.operator.arithmetic.parenthesis.reg
+        19: keyword.operator.arithmetic.parenthesis.reg
+        20: constant.numeric.hex.size.reg
+        21: keyword.operator.arithmetic.parenthesis.reg
+        22: keyword.operator.arithmetic.colon.reg
+        23: constant.numeric.hex.reg
+        24: keyword.operator.arithmetic.linecontinuation.reg
+        25: comment.declarationline.semicolon.reg
+    - match: "[0-9]+"
+      scope: constant.numeric.reg
+    - match: "[a-fA-F]+"
+      scope: constant.numeric.hex.reg
+    - match: ",+"
+      scope: constant.numeric.hex.comma.reg
+    - match: \\
+      scope: keyword.operator.arithmetic.linecontinuation.reg
