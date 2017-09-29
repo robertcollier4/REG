@@ -1,5 +1,6 @@
-// By default this uses SysInternals RegJump (3rd-party utility) included in the REG package directory to jump to the registry key in Windows Registry Editor. However you may change to open with a different 3rd-party registry editor.
+// By default we use regedit.
+// you can set `use_regedit` to false, then define a custom editor with `reg_editor`
 {
-	"RegKeyJumpCmd": ["{PACKAGE_PATH}\\REG\\regjump.exe"]
-	// "RegKeyJumpCmd": ["C:\\Program Files\\Registry Workshop\\RegWorkshop.exe", "/g"]
+    "use_regedit": true,
+	// "reg_editor": ["C:\\Program Files\\Registry Workshop\\RegWorkshop.exe", "/g"]
 }
