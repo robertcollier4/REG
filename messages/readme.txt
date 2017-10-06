@@ -1,5 +1,4 @@
-REG - Syntax Package for Sublime Text 2/3
-============
+## REG - Syntax Package for Sublime Text 2/3
 
 Windows Registry Script (.reg) Language package for SublimeText. Includes syntax highlighting, comments toggling, declaration snippets, a build system to merge current reg file to registry, and a `Jump To Reg Key` command.
 
