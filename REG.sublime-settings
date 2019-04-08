@@ -2,4 +2,5 @@
 {
 	"RegKeyJumpCmd": ["{PACKAGE_PATH}\\REG\\regjump.exe"]
 	// "RegKeyJumpCmd": ["C:\\Program Files\\Registry Workshop\\RegWorkshop.exe", "/g"]
+	// "RegKeyJumpCmd": ["D:\\PortableApps\\RegistryWorkshop\\RegWorkshopPortable.exe", "/g"]
 }
